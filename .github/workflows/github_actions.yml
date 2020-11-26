@@ -13,8 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: install
-      run: composer install
+    - name: Setup PHP Action
+      uses: shivammathur/setup-php@2.8.0
+
 
 
 
