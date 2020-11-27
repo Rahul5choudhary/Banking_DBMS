@@ -16,6 +16,9 @@ jobs:
     - name: Setup PHP Action
       uses: shivammathur/setup-php@2.8.0
 
+    - name: build php file
+      run: php build
+
 
 
 
