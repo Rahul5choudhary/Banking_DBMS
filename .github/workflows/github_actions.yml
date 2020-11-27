@@ -15,6 +15,9 @@ jobs:
 
     - name: Setup PHP Action
       uses: shivammathur/setup-php@2.8.0
+      with:
+        php-version: '7.4'
+        tools: php-cs-fixer, phpunit
 
     - name: build php file
       run: php build
