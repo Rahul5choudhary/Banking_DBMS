@@ -22,7 +22,7 @@
     },
     "scripts": {
         "lint": "phplint --no-cache src/",
-        "phpcs": "phpcs --standard=PSR12 src/",
-        "phpcbf": "phpcbf --standard=PSR12 src/"
+        "phpcs": "phpcs --standard=PSR12",
+        "phpcbf": "phpcbf --standard=PSR12"
     }
 }
