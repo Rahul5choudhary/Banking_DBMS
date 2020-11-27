@@ -1,1 +1,6 @@
-{}
+{
+	"script":{
+		"phpcs": "phpcs --standard=PSR12",
+		"phpcbf": "phpcbf --standard=PSR12"
+	}
+}
