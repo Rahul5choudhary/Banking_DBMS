@@ -18,9 +18,9 @@ jobs:
       with:
         php-version: '7.4'
         tools: php-cs-fixer, phpunit
+    - name: run php-cs
+      run: composer phpcs
 
-    - name: build php file
-      run: php build
 
 
 
