@@ -1,4 +1,4 @@
-name: PHP Linting and CS
+name: PHP syntax check 
 
 on:
   push:
