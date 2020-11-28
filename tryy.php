@@ -97,7 +97,7 @@ echo $website;
 echo "<br>";
 echo $comment;
 echo "<br>";
-echoo $gender;
+echo $gender;
 ?>
 
 </body>
