@@ -28,6 +28,7 @@ jobs:
       run: composer install
     - name: install lint
       uses: overtrue/phplint@master
-      
+        with:
+          path: .phpf/
     - name: Run lint
       run: composer lint
