@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: autentication
-      run: git config --global user.email "ravishekr7@gmail.com"
-    - name: one more
-      run: git config --global user.name "ravishekr7"
     - name: Validate composer.json and composer.lock
       run: composer validate
       
@@ -28,9 +24,5 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
-    - name: composer install
-      run: composer install
-    - name: PHP Lint
-      uses: michaelw90/PHP-Lint@2.1.0
     - name: Run lint
       run: composer lint
