@@ -25,5 +25,8 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
+    - name: composer phar install
+      run: php composer.phar install
+      
     - name: Run lint
       run: composer lint
