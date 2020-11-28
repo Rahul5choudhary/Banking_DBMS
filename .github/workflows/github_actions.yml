@@ -30,14 +30,7 @@ jobs:
           ${{ runner.os }}-php-
     - name: composer install
       run: composer install
-    - name: composer update
-      run: composer update --lock
-    - name: composer self-update
-      run: composer self-update
-    - name: update file by git
-      run: git add composer.lock
-    - name: commit lock
-      run: git push
-      
+    - name: PHP Lint
+      uses: michaelw90/PHP-Lint@2.1.0
     - name: Run lint
       run: composer lint
