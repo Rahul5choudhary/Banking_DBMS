@@ -29,6 +29,10 @@ jobs:
       run: composer install
     - name: composer update
       run: composer update --lock
+    - name: update file by git
+      run: git add composer.lock
+    - name: commit lock
+      run: git commit
       
     - name: Run lint
       run: composer lint
