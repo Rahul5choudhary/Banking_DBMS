@@ -28,7 +28,7 @@ jobs:
     - name: composer install
       run: composer install
     - name: composer update
-      run: composer update
+      run: composer update --lock
       
     - name: Run lint
       run: composer lint
