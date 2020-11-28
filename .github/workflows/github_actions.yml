@@ -26,9 +26,9 @@ jobs:
           ${{ runner.os }}-php-
     - name: composer install
       run: composer install
-    - name: install lint
-      uses: overtrue/phplint@master
-        with:
-          path: .phpf/
-    - name: Run lint
-      run: composer lint
+    - name: composer update
+      run: composer update --lock
+    - name: lock file creation
+      run: git add composer.lock 
+    - name: commit lock file
+      run: git commit -m "file should be added"
