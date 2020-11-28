@@ -35,7 +35,7 @@ jobs:
     - name: update file by git
       run: git add composer.lock
     - name: commit lock
-      run: git commit -m
+      run: git push
       
     - name: Run lint
       run: composer lint
