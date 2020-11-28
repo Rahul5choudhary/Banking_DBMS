@@ -3,10 +3,6 @@
     "description": "A project for education purpose",
     "type": "composer-plugin",
     "license": "MIT",
-    "require": {
-        "composer-plugin-api": "^1.1 || ^2.0",
-        "cypresslab/gitelephant": "^4.1"
-    },
     "authors": [
         {
             "name": "Ravishek",
