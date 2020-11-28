@@ -28,9 +28,6 @@ jobs:
       run: composer install
     - name: install lint
       uses: overtrue/phplint@master
-        with:
-          path: .
-          options: --exclude=*.log
       
     - name: Run lint
       run: composer lint
