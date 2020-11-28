@@ -13,12 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Validate composer.json and composer.lock
       run: composer validate
-    - name: email
-      run: git config --global user.email "ravishekr7@gmail.com"
-    - name: user
-      run: git config --global user.name "ravishekr7"
       
     - name: Cache Composer packages
       id: composer-cache
@@ -28,11 +25,9 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
-    - name: composer install
-      run: composer install
-    - name: composer update
-      run: composer update --lock
-    - name: lock file creation
-      run: git add composer.lock 
-    - name: commit lock file
-      run: git commit -m "file should be added"
+    - name: Install dependencies
+      if: steps.composer-cache.outputs.cache-hit != 'true'
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run lint
+      run: composer lint
