@@ -32,6 +32,8 @@ jobs:
       run: composer install
     - name: composer update
       run: composer update --lock
+    - name: composer self-update
+      run: composer self-update
     - name: update file by git
       run: git add composer.lock
     - name: commit lock
