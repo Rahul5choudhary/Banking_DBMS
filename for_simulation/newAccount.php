@@ -77,7 +77,7 @@ server with default setting (user 'root' with no password) */
                         //echo "Records inserted successfully. Last inserted ID is: " . $last_id;
                         // this section will managed automatic generated mail to the new user
                         // and send them a one time trasaction password.
-                        require_once('phpmailer/PHPMailerAutoload.php');
+                        require_once('../phpmailer/PHPMailerAutoload.php');
                             $mail= new PHPMailer();
                             $mail->isSMTP();
                             $mail->SMTPAuth=true;
