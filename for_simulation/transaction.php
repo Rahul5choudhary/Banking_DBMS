@@ -63,8 +63,7 @@
                                 $_SESSION['to_account']=$to_account;
                                 $_SESSION['amount']=$amount;
                                 $_SESSION['action']=1;
-                                require_once('../phpmailer/PHPMailerAutoload.php');
-                                
+                                require __DIR__ . '../phpmailer/PHPMailerAutoload.php';
                                 $otp=mt_rand(100000,999999);
                                 $mail= new PHPMailer();
                                 $mail->isSMTP();
