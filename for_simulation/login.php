@@ -271,7 +271,7 @@ Session Expired, please login again!
 		
 		<form method="post">
 	
-<h1>LOGIN</h1>
+<h1>LOGIN!</h1>
 			<div class="input-field">
 				<input type="text" name="login" required>
 				<label>Enter Email</label>

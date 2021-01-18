@@ -65,7 +65,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">   
   <ul>
-        <li><a href="#" class="active">Homee</a></li>
+        <li><a href="#" class="active">Home</a></li>
         <li><a href="for_simulation/aboutus.php">About</a></li>
         <li><div class="dropdown show">
   <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
