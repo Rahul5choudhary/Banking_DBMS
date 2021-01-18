@@ -1,6 +1,6 @@
 <?php
 	
-	echo "for testing":
+	echo "for testing";
 
 
 ?>
