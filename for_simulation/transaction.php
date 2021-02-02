@@ -81,11 +81,11 @@
                                 $mail->setFrom('no-reply@apnabank.com');
                                 $mail->Subject='Transaction OTP';
                                 $mail->Body='your one time password is '.$otp;
-                                $mail->AddAddress($_SESSION['email']);
+                                $mail->addAddress($_SESSION['email']);
                                 $to_db=md5(md5($_SESSION['email']).$otp);
                                 $query="UPDATE personal_info SET otp='$to_db' WHERE ".$from_account."=account_number";
                                 $result=mysqli_query($link,$query);
-                                $mail->Send();
+                                $mail->send();
                                 header("location:verify.php?reason=1");
                                 // $query="INSERT INTO txn_within_bank(from_account, to_account,date_of_txn,amount) values('$from_account','$to_account','$date','$amount')";
                                 // if(mysqli_query($link,$query))
