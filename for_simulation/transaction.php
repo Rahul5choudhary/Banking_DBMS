@@ -64,6 +64,7 @@
                                 $_SESSION['amount']=$amount;
                                 $_SESSION['action']=1;
                                 $otp=mt_rand(100000,999999);
+                                
                                 use PHPMailer\PHPMailer\PHPMailer;
                                 require_once "PHPMailer/PHPMailer.php";
                                 require_once "PHPMailer/SMTP.php";
