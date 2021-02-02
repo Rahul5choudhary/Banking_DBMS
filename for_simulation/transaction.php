@@ -63,18 +63,22 @@
                                 $_SESSION['to_account']=$to_account;
                                 $_SESSION['amount']=$amount;
                                 $_SESSION['action']=1;
-                                require_once('phpmailer/PHPMailerAutoload.php');
                                 $otp=mt_rand(100000,999999);
+                                use PHPMailer\PHPMailer\PHPMailer;
+                                require_once "PHPMailer/PHPMailer.php";
+                                require_once "PHPMailer/SMTP.php";
+                                require_once "PHPMailer/Exception.php";
                                 $mail= new PHPMailer();
                                 $mail->isSMTP();
-                                $mail->SMTPAuth=true;
-                                $mail->SMTPSecure='ssl';
                                 $mail->Host='smtp.gmail.com';
-                                $mail->Port='465';
-                                $mail->isHTML();
+                                $mail->SMTPAuth=true;
                                 $mail->Username='apnabankcc@gmail.com';
                                 $mail->Password='apnabankphp@2';
-                                $mail->SetFrom('no-reply@apnabank.com');
+                                $mail->Port='465';
+                                $mail->SMTPSecure='ssl';
+                             
+                                $mail->isHTML(true);
+                                $mail->setFrom('no-reply@apnabank.com');
                                 $mail->Subject='Transaction OTP';
                                 $mail->Body='your one time password is '.$otp;
                                 $mail->AddAddress($_SESSION['email']);
